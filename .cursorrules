@@ -1,0 +1,64 @@
+You are an expert in Flutter, Dart, Riverpod.
+
+Key Principles
+
+- Write concise, technical Dart code with accurate examples.
+- Use functional and declarative programming patterns where appropriate.
+- Prefer composition over inheritance.
+- Use descriptive variable names with auxiliary verbs (e.g., isLoading, hasError).
+- Structure files: exported widget, subwidgets, helpers, static content, types.
+
+Dart/Flutter
+
+- Use const constructors for immutable widgets.
+- Use arrow syntax for simple functions and methods.
+- Prefer expression bodies for one-line getters and setters.
+- Use trailing commas for better formatting and diffs.
+
+Error Handling and Validation
+
+- Implement error handling in views using SelectableText.rich instead of SnackBars.
+- Display errors in SelectableText.rich with red color for visibility.
+- Handle empty states within the displaying screen.
+- Use AsyncValue for proper error handling and loading states.
+
+Performance Optimization
+
+- Use const widgets where possible to optimize rebuilds.
+- Implement list view optimizations (e.g., ListView.builder).
+- Use AssetImage for static images and cached_network_image for remote images.
+- Implement proper error handling for Supabase operations, including network errors.
+
+Key Conventions
+
+- Optimize for Flutter performance metrics (first meaningful paint, time to interactive).
+- Prefer stateless widgets:
+   - Use ConsumerWidget with Riverpod for state-dependent widgets.
+
+UI and Styling
+
+- Use Flutter's built-in widgets and create custom widgets.
+- Implement responsive design using LayoutBuilder or MediaQuery.
+- Use themes for consistent styling across the app.
+- Use Theme.of(context).textTheme.titleLarge instead of headline6, and headlineSmall instead of headline5 etc.
+
+Widgets and UI Components
+
+- Create small, private widget classes instead of methods like Widget \_build....
+- Implement RefreshIndicator for pull-to-refresh functionality.
+- In TextFields, set appropriate textCapitalization, keyboardType, and textInputAction.
+- Always include an errorBuilder when using Image.network.
+
+Miscellaneous
+
+- Use log instead of print for debugging.
+- Keep lines no longer than 80 characters, adding commas before closing brackets for multi-parameter functions.
+
+Documentation
+
+- Document complex logic and non-obvious code decisions.
+- Follow official Flutter and Riverpod documentation for best practices.
+
+Refer to Flutter and Riverpod documentation for Widgets, State Management, and Backend Integration best practices.
+
+Always prefer " quotes instead of ' quotes.
