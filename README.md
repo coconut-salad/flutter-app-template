@@ -1,6 +1,6 @@
 # Flutter App Template
 
-A modern Flutter application template implementing core features and best practices.
+A modern Flutter application template implementing core features and best practices for a mobile app.
 
 ## Features
 
@@ -9,9 +9,9 @@ A modern Flutter application template implementing core features and best practi
 - 🌐 **API Integration** - HTTP client setup with offline mode support
 - 🎨 **Theme Support** - Material 3 theming with custom color schemes
 - 🌍 **Internationalization** - Multi-language support with YAML-based translations
-- 💾 **Local Storage** - Secure storage and shared preferences implementation
+- 💾 **Local Storage** - Secure storage (auth) and shared preferences implementation (for user settings)
 - 📱 **Responsive Design** - Basic responsive UI setup
-- 🪵 **Logging** - Structured logging with the logger package
+- 🪵 **Logging** - Structured logging with the logger package, to console and file
 
 ## Project Structure
 
@@ -21,21 +21,10 @@ lib/
 ├── models/           # Data models
 ├── providers/        # Riverpod providers
 ├── screens/          # UI screens
-│   ├── home/        # Home screen related widgets
-│   └── login/       # Login screen related widgets
+├── widgets/          # Custom widgets and UI components
 ├── utils/           # Utilities and helpers
 └── main.dart        # Application entry point
 ```
-
-## Dependencies
-
-- flutter_riverpod: ^2.6.1
-- flutter_secure_storage: ^9.2.2
-- shared_preferences: ^2.3.3
-- http: ^1.2.2
-- logger: ^2.5.0
-- yaml: ^3.1.2
-- intl: ^0.20.1
 
 ## Getting Started
 
@@ -63,15 +52,6 @@ lib/
    ```bash
    flutter run
    ```
-
-## Architecture
-
-The template follows a clean architecture approach with:
-
-- **Providers Layer** - State management and dependency injection using Riverpod
-- **Services Layer** - API clients and authentication services
-- **UI Layer** - Screens and widgets
-- **Data Layer** - Models and data handling
 
 ## State Management
 
