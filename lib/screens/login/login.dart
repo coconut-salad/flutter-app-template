@@ -1,7 +1,7 @@
 import "package:flutter/material.dart";
 import "package:flutter_riverpod/flutter_riverpod.dart";
 import "package:shared_preferences/shared_preferences.dart";
-import "../../api/client.dart";
+import "../../api/base_client.dart";
 import "../../models/models.dart";
 import "../../providers/providers.dart";
 import "../../utils/logger.dart";
@@ -58,7 +58,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
     super.dispose();
   }
 
-  Future<void> _handleLogin(Client client) async {
+  Future<void> _handleLogin(BaseClient client) async {
     if (!_formKey.currentState!.validate()) return;
 
     setState(() {

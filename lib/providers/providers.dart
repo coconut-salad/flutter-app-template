@@ -3,7 +3,7 @@ import "package:shared_preferences/shared_preferences.dart";
 
 import "../api/api_client.dart";
 import "../api/auth_service.dart";
-import "../api/client.dart";
+import "../api/base_client.dart";
 import "../api/offline_client.dart";
 import "../models/models.dart";
 import "settings_provider.dart";
@@ -32,11 +32,11 @@ final settingsProvider =
   return SettingsNotifier(prefs);
 });
 
-final clientProvider = StateProvider<Client>((ref) {
+final clientProvider = StateProvider<BaseClient>((ref) {
   if (ref.watch(offlineModeProvider.notifier).state) {
-    return Client(client: OfflineClient());
+    return OfflineClient();
   } else {
-    return Client(client: ApiClient());
+    return ApiClient();
   }
 });
 
